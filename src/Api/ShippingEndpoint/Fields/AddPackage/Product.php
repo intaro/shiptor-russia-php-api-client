@@ -27,6 +27,19 @@ class Product extends Custom{
         $this->getFieldsCollection()->get('vat')->setValue($vat);
         return $this;
     }
+
+    public function setSupplierName($name)
+    {
+        $this->getFieldsCollection()->get("supplier_name")->setValue($name);
+        return $this;
+    }
+
+    public function setMarkCode($code)
+    {
+        $this->getFieldsCollection()->get("mark_code")->setValue($code);
+        return $this;
+    }
+
     public function checkSingleValue($value){
         return is_array($value);
     }
