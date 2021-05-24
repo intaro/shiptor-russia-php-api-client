@@ -9,7 +9,9 @@ class Product extends Custom{
                 ->String("shopArticle")->setRequired()->add()
                 ->Number("count")->setRequired()->add()
                 ->Number("price")->setRequired()->add()
-                ->Number("vat")->add();
+                ->Number("vat")->add()
+                ->String("supplier_name")->add()
+                ->String("mark_code")->add();
     }
     public function setShopArticle($article){
         $this->getFieldsCollection()->get('shopArticle')->setValue($article);
